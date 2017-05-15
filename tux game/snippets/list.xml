@@ -51,4 +51,102 @@
             <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_7" classname="scripts.ActorEvents_7" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="4" language="" name="ActorEvents_7" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_5_5_FollowTarget" classname="scripts.Design_5_5_FollowTarget" desc="Make the actor follow a given actor." description="Make the actor follow a given actor." design="true" drawOrder="0" id="5" language="" name="Follow Target" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <actor default="" defaultValue="" desc="The target actor this actor will follow. &lt;br /&gt;&#10;If the target actor is unset or dead this behavior will do nothing." dropdown="" fullname="Target Actor" hidden="false" id="1" name="_TargetActor" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance X" hidden="true" id="2" name="_DistanceX" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance Y" hidden="true" id="3" name="_DistanceY" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance" hidden="true" id="4" name="_Distance" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Direction" hidden="true" id="5" name="_Direction" order="4"/>
+        <number default="30.0" defaultValue="30.0" desc="The speed to move towards the target." dropdown="" fullname="Speed" hidden="false" id="6" name="_Speed" order="8"/>
+        <number default="0.0" defaultValue="0.0" desc="The actor will not move closer to the target than this value." dropdown="" fullname="Margin" hidden="false" id="7" name="_Margin" order="9"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the actor will move faster if farther away from the target and slower if closer to to the target.&lt;br /&gt;&#10;If unselected, the actor will move towards the target at a constant speed as specified in the &lt;var&gt;Speed&lt;/var&gt; attribute." dropdown="" fullname="Easing" hidden="false" id="8" name="_Easing" order="11"/>
+        <number default="5.0" defaultValue="5.0" desc="Only used when &lt;var&gt;Easing&lt;/var&gt; is selected.&lt;br /&gt;&#10;The actor will move at least at this speed. The actual speed depends on the distance to the target. The maximum speed is &lt;var&gt;Minimum Easing Speed&lt;/var&gt; plus &lt;var&gt;Speed&lt;/var&gt;. The actor will move at maximum speed if it is in the opposite diagonal corner of the target." dropdown="" fullname="Minimum Easing Speed" hidden="false" id="9" name="_MinimumEasingSpeed" order="12"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Screen Diagonal" hidden="true" id="10" name="_ScreenDiagonal" order="5"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the actor will stop moving when colliding with the target actor.&lt;br /&gt;&#10;If unselected, the actor will instead continue to  and push the target around." dropdown="" fullname="Stop when Colliding" hidden="false" id="11" name="_StopwhenColliding" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Collided" hidden="true" id="12" name="_Collided" order="6"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
+            <event displayName="Actor - Any" enabled="true" id="3" name="event-collide-actor" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_6_6_ReloadSceneOnDeath" classname="scripts.Design_6_6_ReloadSceneOnDeath" desc="Reload the scene when this actor dies." description="Reload the scene when this actor dies." design="true" drawOrder="0" id="6" language="" name="Reload Scene On Death" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0.5" defaultValue="0.5" desc="The time to transition out, in seconds, if one of the first six &lt;em&gt;Transition Styles&lt;/em&gt; is used. Otherwise the time to transition out and in." dropdown="" fullname="Out Time" hidden="false" id="1" name="_OutTime" order="2"/>
+        <number default="0.5" defaultValue="0.5" desc="The time to transition in, in seconds, if one of the first six &lt;em&gt;Transition Styles&lt;/em&gt; is used. Otherwise it is ignored." dropdown="" fullname="In Time" hidden="false" id="2" name="_InTime" order="3"/>
+        <text default="" defaultValue="" desc="The style to use for the reload transition." dropdown="Fade=Fade&#10;Blinds=Blinds&#10;Bubbles=Bubbles&#10;Spotlight=Spotlight&#10;Blur=Blur&#10;Box=Box&#10;Crossfade=Crossfade&#10;Slide Up=Slide Up&#10;Slide Down=Slide Down&#10;Slide Left=Slide Left&#10;Slide Right=Slide Right" fullname="Transition Style" hidden="false" id="3" name="_TransitionStyle" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Actor Created" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
+            <event displayName="Reload" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_7_7_DieOnLeavingScreen" classname="scripts.Design_7_7_DieOnLeavingScreen" desc="Attach to an actor to make it die once it leaves the screen." description="Attach to an actor to make it die once it leaves the screen." design="true" drawOrder="0" id="7" language="" name="Die On Leaving Screen" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Creation" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Leaves Screen" enabled="true" id="4" name="event-actor-screen" order="4" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_8_8_IntroTitle" classname="scripts.Design_8_8_IntroTitle" desc="Shows an intro title, which slides away after the specified time." description="Shows an intro title, which slides away after the specified time." design="true" drawOrder="0" id="8" language="" name="Intro Title" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
+        <boolean default="false" defaultValue="false" desc="INTERNAL ATTRIBUTE. Whether or not the slide-off has started." dropdown="" fullname="Started" hidden="true" id="5" name="_Started" order="0"/>
+        <font default="" defaultValue="" desc="The font to use when drawing the intro title. Specify from the list of fonts you have created in Stencyl." dropdown="" fullname="Font To Use" hidden="false" id="6" name="_FontToUse" order="7"/>
+        <number default="1.0" defaultValue="1.0" desc="The amount of time, in seconds, before that the intro title should wait before beginning its exit of the screen." dropdown="" fullname="Time Before Retreat" hidden="false" id="7" name="_TimeBeforeRetreat" order="5"/>
+        <number default="0.0" defaultValue="0.0" desc="The y-position, in screen coordinates, of the centre of the Intro Title." dropdown="" fullname="Y Centre Position" hidden="false" id="8" name="_YCentrePosition" order="4"/>
+        <text default="" defaultValue="" desc="Show this text in the Intro Title. Leave blank to use the scene's name." dropdown="" fullname="Alternative Text" hidden="false" id="10" name="_AlternativeText" order="6"/>
+        <number default="-5.0" defaultValue="-5.0" desc="The initial speed to slide off the screen at." dropdown="" fullname="Slide Speed" hidden="false" id="11" name="_SlideSpeed" order="1"/>
+        <boolean default="false" defaultValue="false" desc="Should a rounded rectangle be drawn behind the text?" dropdown="" fullname="Draw Rounded Rectangle?" hidden="false" id="12" name="_DrawRectangle" order="9"/>
+        <number default="0.0" defaultValue="0.0" desc="The x-position, in screen coordinates, of the centre of the Intro Title." dropdown="" fullname="X Centre Position" hidden="false" id="13" name="_XCentrePosition" order="3"/>
+        <color default="204,255,255,255" defaultValue="204,255,255,255" desc="The fill colour for the rounded rectangle behind the text, if one is drawn." dropdown="" fullname="Fill Colour" hidden="false" id="14" name="_FillColour" order="10"/>
+        <color default="153,204,255,255" defaultValue="153,204,255,255" desc="The stroke colour for the rounded rectangle behind the text, if one is drawn. (Stroke is the outline)." dropdown="" fullname="Stroke Colour" hidden="false" id="15" name="_StrokeColour" order="11"/>
+        <number default="1.0" defaultValue="1.0" desc="The thickness, in pixels, of the stroke around the outside of the rounded rectangle behind the text, if one is drawn." dropdown="" fullname="Stroke Thickness" hidden="false" id="16" name="_StrokeThickness" order="12"/>
+        <number default="4.0" defaultValue="4.0" desc="Padding around the text, in pixels, for the rounded rectangle behind the text, if one is drawn." dropdown="" fullname="Padding" hidden="false" id="17" name="_Padding" order="13"/>
+        <number default="2.0" defaultValue="2.0" desc="The amount the rounded rectangle is rounded, if one is drawn. (Use 0 for right-angled corners)." dropdown="" fullname="Rounding" hidden="false" id="18" name="_Rounding" order="14"/>
+        <text default="" defaultValue="" desc="The direction the Intro Title slides away to." dropdown="Up=Up&#10;Down=Down&#10;Left=Left&#10;Right=Right" fullname="Slide Direction" hidden="false" id="19" name="_SlideDirection" order="8"/>
+        <number default="0.5" defaultValue="0.5" desc="The slide speed is incremented by this value every update." dropdown="" fullname="Slide Speed Change" hidden="false" id="20" name="_SlideSpeedChange" order="2"/>
+        <blocks>
+            <receiver blockID="113" id="1"/>
+            <receiver blockID="15" id="2"/>
+            <receiver blockID="16" id="3"/>
+            <receiver blockID="18" id="4"/>
+            <receiver blockID="111" id="5"/>
+            <receiver blockID="112" id="6"/>
+        </blocks>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="3" name="draw" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_9_9_CustomMouseCursor" classname="scripts.Design_9_9_CustomMouseCursor" desc="Allows you to change or hide the mouse cursor.&lt;br/&gt;" description="Allows you to change or hide the mouse cursor.&lt;br/&gt;" design="true" drawOrder="0" id="9" language="" name="Custom Mouse Cursor" oid="-1" package="scripts" scenespecific="false" shared="false" type="scene">
+        <actortype default="" defaultValue="" desc="The actor type to use as a mouse cursor.&lt;br/&gt;&#10;Only used when &lt;var&gt;Cursor Mode&lt;/var&gt; is set to &lt;var&gt;Custom&lt;/var&gt;." dropdown="" fullname="Custom Cursor" hidden="false" id="3" name="_CustomCursor" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="A horizontal offset at which the custom cursor is displayed.&lt;br/&gt;&#10;" dropdown="" fullname="X-Offset" hidden="false" id="4" name="_XOffset" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="A vertical offset at which the custom cursor is displayed.&lt;br/&gt;&#10;" dropdown="" fullname="Y-Offset" hidden="false" id="5" name="_YOffset" order="5"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Cursor Actor" hidden="true" id="9" name="_CursorActor" order="6"/>
+        <text default="" defaultValue="" desc="&lt;var&gt;Default&lt;var/&gt; - show the default cursor&lt;br/&gt;&#10;&lt;var&gt;Hidden&lt;var/&gt; - don't show a cursor&lt;br/&gt;&#10;&lt;var&gt;Custom&lt;var/&gt; - show the image of the actor type selected below" dropdown="Default=Default&#10;Hidden=Hidden&#10;Custom=Custom&#10;" fullname="Cursor Mode" hidden="false" id="10" name="_CursorMode" order="2"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="3" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="5" name="draw" order="6" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_10_10_DieInPitAndReload" classname="scripts.Design_10_10_DieInPitAndReload" desc="When the actor falls into a &quot;pit&quot; (e.g. off the bottom of the scene), it will be killed and the scene will reload." description="When the actor falls into a &quot;pit&quot; (e.g. off the bottom of the scene), it will be killed and the scene will reload." design="true" drawOrder="0" id="10" language="" name="Die In Pit And Reload" oid="-1" package="scripts" scenespecific="false" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0.5" defaultValue="0.5" desc="The time to transition out, in seconds, if one of the first six &lt;em&gt;Transition Styles&lt;/em&gt; is used. Otherwise the time to transition out and in." dropdown="" fullname="Out Time" hidden="false" id="3" name="_OutTime" order="2"/>
+        <number default="0.5" defaultValue="0.5" desc="The time to transition in, in seconds, if one of the first six &lt;em&gt;Transition Styles&lt;/em&gt; is used. Otherwise it is ignored." dropdown="" fullname="In Time" hidden="false" id="4" name="_InTime" order="3"/>
+        <text default="" defaultValue="" desc="The style to use for the reload transition." dropdown="Fade=Fade&#10;Blinds=Blinds&#10;Bubbles=Bubbles&#10;Spotlight=Spotlight&#10;Blur=Blur&#10;Box=Box&#10;Crossfade=Crossfade&#10;Slide Up=Slide Up&#10;Slide Down=Slide Down&#10;Slide Left=Slide Left&#10;Slide Right=Slide Right" fullname="Transition Style" hidden="false" id="5" name="_TransitionStyle" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
+            <event displayName="Reload" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+        </events>
+    </snippet>
 </pack>

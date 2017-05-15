@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="4" fixedrot="false" fric="0.2" gid="3" id="7" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="enemy1" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="8" static="false">
+        <snippets>
+            <s enabled="true" id="5">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0.0"/>
+                <prop id="3" list="0" val="0.0"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="0.0"/>
+                <prop id="6" list="0" val="30.0"/>
+                <prop id="7" list="0" val="0.0"/>
+                <prop id="8" list="0" val="true"/>
+                <prop id="9" list="0" val="5.0"/>
+                <prop id="10" list="0" val="0.0"/>
+                <prop id="11" list="0" val="true"/>
+                <prop id="12" list="0" val="false"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="8" name="enemy1" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="left" numframes="1" originx="16" originy="16" sync="false" version="2" width="32">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="120" id="2" name="grad1" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="160" xpf="1.0" ypf="1.0"/>
     <tileset across="5" atlasID="0" desc="" down="1" id="1" name="main" oid="-1" shared="false" th="8" tw="8">
         <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
@@ -136,7 +160,7 @@
         <tile collision="1" data="" durations="100" frames="124" id="124" order="-1"/>
         <tile collision="1" data="" durations="100" frames="125" id="125" order="-1"/>
     </tileset>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="0" fixedrot="true" fric="0.2" gid="3" id="3" ignoreg="false" inertia="1.0" ldamp="0.1" mass="1.0" name="tux" oid="-1" pausable="true" physicsMode="0" rest="0.1" shared="false" sprite="4" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="0" fixedrot="true" fric="0.2" gid="0" id="3" ignoreg="false" inertia="1.0" ldamp="0.1" mass="1.0" name="tux" oid="-1" pausable="true" physicsMode="0" rest="0.1" shared="false" sprite="4" static="false">
         <snippets>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -164,10 +188,20 @@
                 <prop id="62" list="0" val="0.2"/>
                 <prop id="63" list="0" val="100"/>
             </s>
-            <s enabled="false" id="3">
+            <s enabled="true" id="6">
                 <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="4" list="0" val="-90"/>
-                <prop id="5" list="0" val="1.0"/>
+                <prop id="1" list="0" val="0.5"/>
+                <prop id="2" list="0" val="0.5"/>
+                <prop id="3" list="0" val="Fade"/>
+            </s>
+            <s enabled="true" id="7">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="10">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="3" list="0" val="0.5"/>
+                <prop id="4" list="0" val="0.5"/>
+                <prop id="5" list="0" val="Fade"/>
             </s>
         </snippets>
     </actor>

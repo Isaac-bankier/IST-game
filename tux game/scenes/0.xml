@@ -8,9 +8,62 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="3" id="3" name="tux 1" sx="2.5625" sy="2.875" x="3" y="297" z="0"/>
+        <actor a="0.0" aid="1" c="true" group="0" id="3" name="tux 1" sx="2.5625" sy="2.875" x="36" y="268" z="0">
+            <snippets>
+                <s enabled="true" id="0"/>
+                <s enabled="true" id="2">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="33" list="0" val="left"/>
+                    <prop id="34" list="0" val="right"/>
+                    <prop id="37" list="0" val="0.0"/>
+                    <prop id="38" list="0" val="true"/>
+                    <prop id="41" list="0" val="up"/>
+                    <prop id="42" list="0" val="false"/>
+                    <prop id="43" list="0" val="false"/>
+                    <prop id="11" list="0" val="15.0"/>
+                    <prop id="45" list="0" val="50"/>
+                    <prop id="47" list="0" val="run-r"/>
+                    <prop id="48" list="0" val="run-l"/>
+                    <prop id="49" list="0" val="rest"/>
+                    <prop id="50" list="0" val="rest-l"/>
+                    <prop id="52" list="0" val="false"/>
+                    <prop id="53" list="0" val="rest"/>
+                    <prop id="54" list="0" val="rest-l"/>
+                    <prop id="55" list="0" val="false"/>
+                    <prop id="56" list="0" val="true"/>
+                    <prop id="57" list="0" val="false"/>
+                    <prop id="58" list="0" val="false"/>
+                    <prop id="60" list="0" val="false"/>
+                    <prop id="62" list="0" val="0.2"/>
+                    <prop id="63" list="0" val="100"/>
+                </s>
+                <s enabled="false" id="3">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="4" list="0" val="-90"/>
+                    <prop id="5" list="0" val="1.0"/>
+                </s>
+            </snippets>
+        </actor>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="false" id="8">
+            <prop id="5" list="0" val="false"/>
+            <prop id="6" list="0" val="-1"/>
+            <prop id="7" list="0" val="1.0"/>
+            <prop id="8" list="0" val="0.0"/>
+            <prop id="10" list="0" val="Tux game!!!"/>
+            <prop id="11" list="0" val="-5.0"/>
+            <prop id="12" list="0" val="false"/>
+            <prop id="13" list="0" val="0.0"/>
+            <prop id="14" list="0" val="204,255,255,255"/>
+            <prop id="15" list="0" val="153,204,255,255"/>
+            <prop id="16" list="0" val="1.0"/>
+            <prop id="17" list="0" val="4.0"/>
+            <prop id="18" list="0" val="2.0"/>
+            <prop id="19" list="0" val="Down"/>
+            <prop id="20" list="0" val="0.5"/>
+        </s>
+    </snippets>
     <terrain>
         <p pts="8,32.0,32.0,0.0,32.0,0.0,0.0,96.0,0.0,96.0,32.0,64.0,32.0,64.0,128.0,32.0,128.0" x="160.0" y="352.0"/>
         <p pts="6,64.0,0.0,64.0,128.0,32.0,128.0,32.0,32.0,0.0,32.0,0.0,0.0" x="576.0" y="352.0"/>
